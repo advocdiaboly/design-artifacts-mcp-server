@@ -1,4 +1,4 @@
-package com.verter.bridge.model;
+package com.github.advoc_diaboly.design_artifacts_mcp_server.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,10 +11,9 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ADR {
+public class Project {
     private String id;
-    private String projectId;
-    private String title;
-    private String content;
+    private String name;
+    private String description;
     private LocalDateTime createdAt;
 }

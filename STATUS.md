@@ -8,7 +8,7 @@ Refactor Project Bridge to use annotation-based MCP implementation and filesyste
 ### Done
 - Resolved `pom.xml` issues using `spring-ai-mcp-server-spring-boot-starter:1.0.0-M6`.
 - Refactored repositories to filesystem.
-- Deleted obsolete `com.verter.bridge.mcp` package.
+- Deleted obsolete `com.github.advoc_diaboly.design_artifacts_mcp_server.mcp` package.
 - Updated `ProjectService.java` with filesystem utilities (`listFiles`, `readFile`).
 - Refactored MCP integration to use annotation-based implementation (`@McpTool`).
 - Removed manual `McpServerConfig.java` in favor of auto-configuration.

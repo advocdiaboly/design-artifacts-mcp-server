@@ -1,8 +1,8 @@
-package com.verter.bridge.controller;
+package com.github.advoc_diaboly.design_artifacts_mcp_server.controller;
 
-import com.verter.bridge.model.ADR;
-import com.verter.bridge.model.Project;
-import com.verter.bridge.service.ProjectService;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.model.ADR;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.model.Project;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.service.ProjectService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

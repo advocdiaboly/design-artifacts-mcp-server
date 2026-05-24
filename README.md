@@ -1,6 +1,6 @@
 # Project Bridge
 
-A lightweight Java/Spring Boot service that acts as a bridge between **LibreChat (Verter)** and **Opencode (Gromozeka)**. 
+A lightweight Java/Spring Boot service that acts as a bridge between **LibreChat** and **Opencode**. 
 
 It manages project metadata and Architectural Decision Records (ADRs) using a file-based approach, ensuring that specifications discussed in the chat interface are persisted as Markdown files for later use in development.
 

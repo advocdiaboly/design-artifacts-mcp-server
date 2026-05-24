@@ -1,6 +1,6 @@
-package com.verter.bridge.repository;
+package com.github.advoc_diaboly.design_artifacts_mcp_server.repository;
 
-import com.verter.bridge.model.Project;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.model.Project;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

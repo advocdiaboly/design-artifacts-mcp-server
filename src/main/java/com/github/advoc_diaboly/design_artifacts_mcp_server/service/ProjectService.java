@@ -1,9 +1,9 @@
-package com.verter.bridge.service;
+package com.github.advoc_diaboly.design_artifacts_mcp_server.service;
 
-import com.verter.bridge.model.ADR;
-import com.verter.bridge.model.Project;
-import com.verter.bridge.repository.ADRRepository;
-import com.verter.bridge.repository.ProjectRepository;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.model.ADR;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.model.Project;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.repository.ADRRepository;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.repository.ProjectRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

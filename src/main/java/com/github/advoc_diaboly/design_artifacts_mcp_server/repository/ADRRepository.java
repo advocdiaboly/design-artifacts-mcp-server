@@ -1,8 +1,8 @@
-package com.verter.bridge.repository;
+package com.github.advoc_diaboly.design_artifacts_mcp_server.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
-import com.verter.bridge.model.ADR;
+import com.github.advoc_diaboly.design_artifacts_mcp_server.model.ADR;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
