@@ -70,6 +70,6 @@ The service implements the Model Context Protocol (MCP) using the Spring AI MCP 
 - `read_file`: Reads the content of a file.
 
 ### Integration Details
-- **Transport**: Uses standard MCP transport.
+- **Transport**: Uses Streamable HTTP transport.
 - **Implementation**: Spring AI MCP starter manages the server lifecycle. Tools are implemented declaratively using `@McpTool` annotations on service methods, which the auto-configuration automatically detects and registers.
 
