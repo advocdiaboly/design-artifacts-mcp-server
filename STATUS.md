@@ -12,12 +12,14 @@ Refactor Project Bridge to use annotation-based MCP implementation and filesyste
 - Updated `ProjectService.java` with filesystem utilities (`listFiles`, `readFile`).
 - Refactored MCP integration to use annotation-based implementation (`@McpTool`).
 - Removed manual `McpServerConfig.java` in favor of auto-configuration.
+- Containerized the server using a multi-stage Dockerfile with Java 21 Alpine.
+- Configured MCP to use `STREAMABLE` transport.
 
 ### In Progress
-- (none)
+- Verifying Docker container integration and LibreChat connection.
 
 ### Blocked
 - (none)
 
 ## Next Steps
-- Verify tool registration and functionality through integration testing.
+- Run the Docker container and verify connection from LibreChat via the MCP Inspector.

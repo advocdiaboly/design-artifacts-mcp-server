@@ -19,7 +19,7 @@ The service follows a simple RESTful architecture:
     - `/app/projects/{project_id}/metadata.json` for project details.
     - `/app/projects/{project_id}/adrs/{title}.md` for ADRs.
 - **Tech Stack**:
-    - Java 17
+    - Java 21
     - Spring Boot 3.2.2
     - Maven
     - Jackson (JSON & YAML parsing)
@@ -36,33 +36,19 @@ The service follows a simple RESTful architecture:
 
 ### Running with Docker
 
-The service is designed to be run as part of the `verter_infra` stack.
-
-1. Ensure you are in the `verter_infra` directory.
-2. Run the following command:
+1. Build the image:
    ```bash
-   docker compose up -d project-bridge
+   docker build -t design-artifacts-mcp-server .
    ```
 
-### Local Development
-
-1. Navigate to the project directory.
-2. Build the project:
+2. Run the container with a volume mount for local projects:
    ```bash
-   mvn clean install
-   ```
-3. Run the application:
-   ```bash
-   mvn spring-boot:run
+   docker run -p 8080:8080 -v /home/dima/projects:/app/projects design-artifacts-mcp-server
    ```
 
-## API Endpoints
+### MCP (Model Context Protocol) Integration
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `POST` | `/api/projects` | Create a new project |
-| `GET` | `/api/projects` | List all projects |
-| `GET` | `/api/projects/{id}` | Get project details |
-| `POST` | `/api/projects/{projectId}/adrs` | Create a new ADR |
-| `GET` | `/api/projects/{projectId}/adrs` | List ADRs for a project |
-| `GET` | `/api/adrs/{adrId}` | Get a specific ADR |
+The service implements MCP using **Streamable HTTP** transport. 
+
+- **Endpoint**: `/mcp`
+- **Connection URL**: `http://<WSL2_IP>:8080/mcp` (Use your WSL2 IP address to connect from the host).

@@ -12,6 +12,7 @@
 - [ ] Add integration tests for the REST API
 - [ ] Implement error handling for edge cases (e.g., duplicate ADR titles, invalid project IDs)
 - [ ] Add validation for input (e.g., name length, title characters)
+- [ ] Verify Docker container integration and LibreChat connection.
 
 ## Phase 3: Advanced Features (Pending)
 - [ ] Add capability to list all ADRs for a specific project (already partially implemented, need to verify)
