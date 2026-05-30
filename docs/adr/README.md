@@ -1,6 +1,6 @@
 # ADR Storage Convention
-
-All Architectural Decision Records (ADRs) are stored in the `docs/adr/` directory.
+ 
+Architectural Decision Records (ADRs) are stored as Markdown files in a configurable directory (default: `docs/adr`).
 
 ## File Format
 - Each ADR is a Markdown file.

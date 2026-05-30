@@ -8,6 +8,7 @@
 - [x] Implement Dockerfile and Docker Compose integration
 
 ## Phase 2: Robustness & Testing (Pending)
+- [x] Make ADR directory configurable (default: docs/adr)
 - [ ] Add unit tests for `ProjectService` (specifically filesystem I/O)
 - [ ] Add integration tests for the REST API
 - [ ] Implement error handling for edge cases (e.g., duplicate ADR titles, invalid project IDs)

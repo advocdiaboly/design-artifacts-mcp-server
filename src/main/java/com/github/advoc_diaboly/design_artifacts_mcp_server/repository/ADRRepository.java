@@ -23,16 +23,19 @@ import java.util.stream.Stream;
 public class ADRRepository {
 
     private final String projectsBaseDir;
+    private final String adrsDir;
     private final YAMLMapper yamlMapper = new YAMLMapper();
     private final Pattern frontmatterPattern = Pattern.compile("^---\\s*\\n(.*?)\\n---\\s*\\n(.*)$", Pattern.DOTALL);
 
-    public ADRRepository(@Value("${project.base-dir}") String projectsBaseDir) {
+    public ADRRepository(@Value("${project.base-dir}") String projectsBaseDir,
+                         @Value("${project.adrs-dir:docs/adr}") String adrsDir) {
         this.projectsBaseDir = projectsBaseDir;
+        this.adrsDir = adrsDir;
     }
 
     public ADR save(String projectId, String title, String content, String adrId, LocalDateTime createdAt) throws IOException {
         String sanitizedTitle = title.replaceAll("[^a-zA-Z0-9]", "_");
-        Path adrPath = Paths.get(projectsBaseDir, projectId, "adrs", sanitizedTitle + ".md");
+        Path adrPath = Paths.get(projectsBaseDir, projectId, adrsDir, sanitizedTitle + ".md");
         
         String frontmatter = String.format("---\nid: %s\nprojectId: %s\ntitle: %s\ncreatedAt: %s\n---\n\n%s",
                 adrId, projectId, title, createdAt.format(DateTimeFormatter.ISO_DATE_TIME), content);
@@ -49,10 +52,10 @@ public class ADRRepository {
     }
 
     public List<ADR> findByProjectId(String projectId) {
-        Path adrsDir = Paths.get(projectsBaseDir, projectId, "adrs");
-        if (!Files.exists(adrsDir)) return Collections.emptyList();
+        Path adrsDirPath = Paths.get(projectsBaseDir, projectId, adrsDir);
+        if (!Files.exists(adrsDirPath)) return Collections.emptyList();
 
-        try (Stream<Path> stream = Files.list(adrsDir)) {
+        try (Stream<Path> stream = Files.list(adrsDirPath)) {
             return stream.filter(p -> p.toString().endsWith(".md"))
                     .map(this::loadADR)
                     .filter(Objects::nonNull)

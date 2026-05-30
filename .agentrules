@@ -4,3 +4,7 @@ To avoid accidental data loss or corruption during file editing:
 - **Minimize Replacement Scope**: Never use large blocks of a file as the `oldString`. Always target the smallest, most unique string necessary to perform the replacement.
 - **Verify Context**: Ensure that the `newString` correctly preserves the surrounding context and indentation.
 - **Avoid Overwriting**: If a change requires multiple steps, perform them as separate, small `edit` calls rather than one large replacement.
+
+# Git Commit Guidelines
+
+- **Atomic Commits**: Each commit should represent a single logical change. Do not group unrelated changes into a single commit. If multiple files are modified for different reasons, commit them separately.

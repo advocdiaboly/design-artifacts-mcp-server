@@ -14,7 +14,7 @@ Each project is represented by a directory within the base `/app/projects` direc
   ```text
   /app/projects/{project_id}/
   ├── metadata.json      # Contains project name, description, and creation date.
-  └── adrs/               # Sub-directory for ADR files.
+  └── {adrs_dir}/        # Sub-directory for ADR files (default: docs/adr).
   ```
 
 ### 2. ADR Storage
@@ -52,7 +52,7 @@ Simple POJOs (Plain Old Java Objects) representing `Project` and `ADR` entities.
 3. **Project Bridge**: Creates directory, writes `metadata.json`, returns Project ID.
 4. **LibreChat (User)**: "Let's write an ADR for the database choice."
 5. **LibreChat (Agent)**: Calls `POST /api/projects/{id}/adrs?title=DatabaseChoice` with content.
-6. **Project Bridge**: Writes `.md` file to `/app/projects/{id}/adrs/DatabaseChoice.md`.
+6. **Project Bridge**: Writes `.md` file to `/app/projects/{id}/{adrs_dir}/DatabaseChoice.md`.
 7. **Opencode (Agent)**: Reads the files from the shared volume to implement the project according to the ADRs.
 
 ## MCP (Model Context Protocol) Integration

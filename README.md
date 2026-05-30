@@ -13,11 +13,11 @@ It manages project metadata and Architectural Decision Records (ADRs) using a fi
 - **MCP (Model Context Protocol)**: Provides a standardized toolset for LLMs to interact with the project bridge.
 
 ## Architecture
-
+ 
 The service follows a simple RESTful architecture:
 - **Storage**: Filesystem-based.
     - `/app/projects/{project_id}/metadata.json` for project details.
-    - `/app/projects/{project_id}/adrs/{title}.md` for ADRs.
+    - `/app/projects/{project_id}/{adrs_dir}` for ADRs (default: `docs/adr`).
 - **Tech Stack**:
     - Java 21
     - Spring Boot 3.2.2
