@@ -1,6 +1,6 @@
-package com.github.advoc_diaboly.design_artifacts_mcp_server.repository;
+package com.github.advocdiaboly.design_artifacts_mcp_server.repository;
 
-import com.github.advoc_diaboly.design_artifacts_mcp_server.model.Project;
+import com.github.advocdiaboly.design_artifacts_mcp_server.model.Project;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

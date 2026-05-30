@@ -1,4 +1,4 @@
-package com.github.advoc_diaboly.design_artifacts_mcp_server.model;
+package com.github.advocdiaboly.design_artifacts_mcp_server.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

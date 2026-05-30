@@ -1,4 +1,4 @@
-package com.github.advoc_diaboly.design_artifacts_mcp_server;
+package com.github.advocdiaboly.design_artifacts_mcp_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

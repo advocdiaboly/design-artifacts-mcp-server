@@ -1,8 +1,8 @@
-package com.github.advoc_diaboly.design_artifacts_mcp_server.controller;
+package com.github.advocdiaboly.design_artifacts_mcp_server.controller;
 
-import com.github.advoc_diaboly.design_artifacts_mcp_server.model.ADR;
-import com.github.advoc_diaboly.design_artifacts_mcp_server.model.Project;
-import com.github.advoc_diaboly.design_artifacts_mcp_server.service.ProjectService;
+import com.github.advocdiaboly.design_artifacts_mcp_server.model.ADR;
+import com.github.advocdiaboly.design_artifacts_mcp_server.model.Project;
+import com.github.advocdiaboly.design_artifacts_mcp_server.service.ProjectService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
