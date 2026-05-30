@@ -10,3 +10,28 @@ To avoid accidental data loss or corruption during file editing:
 - **Atomic Commits**: Each commit should represent a single logical change. Do not group unrelated changes into a single commit. If multiple files are modified for different reasons, commit them separately.
 
 - **Documentation Consistency**: Before committing code changes, ensure that all relevant documentation (e.g., `README.md`, `ARCHITECTURE.md`, `API.md`, and any project-specific docs) is updated to reflect the changes. Verify that the documentation remains consistent with the new implementation.
+
+- **Commit Message Validation**: Before performing a `git commit`, present the intended commit message to the user for validation.
+
+### Rule: Git Commit Message Generation
+
+**Trigger:** The user requests a commit message, provides a `git diff`, or uses a commit-generation command.
+
+**Constraint Checklist & Confidence Score:**
+1. Analyze the provided diff. Ignore automatically generated files (e.g., lockfiles, build artifacts) and pure formatting changes.
+2. Identify the single primary logical intent of the changes. If multiple unrelated changes exist, ask the user to split the diff.
+3. Formulate the message strictly using the Conventional Commits specification.
+
+**Format Specification:**
+<type>(<scope>): <subject>
+
+[optional body]
+
+- **Type:** Strictly one of `feat`, `fix`, `refactor`, `docs`, `chore`, `test`, `perf`.
+- **Scope:** The specific architectural module or component modified (lowercase). This part is optional.
+- **Subject:** Imperative mood ("add", not "added" or "adds"). Maximum 50 characters. No trailing period.
+- **Breaking Changes:** For breaking changes, use the `!` suffix after the type/scope (e.g., `feat(api)!: change endpoint`) or include a `BREAKING CHANGE:` footer in the body.
+- **Body:** Required only for complex changes. Explain the *Why* (the business or architectural reason) and the *What* (high-level concept). Do NOT explain the *How* (the code diff already does this). Wrap text at 72 characters.
+
+**Output Constraints:**
+- Output ONLY the final commit message.
