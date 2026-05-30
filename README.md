@@ -30,7 +30,7 @@ The service follows a simple RESTful architecture:
 
 ### Prerequisites
 
-- Java 17
+- Java 21
 - Maven 3.x
 - Docker & Docker Compose
 

@@ -19,7 +19,7 @@ When working on this project, follow these steps:
 
 ## Coding Standards
 
-- **Language**: Java 17.
+- **Language**: Java 21.
 - **Style**: Follow standard Spring Boot conventions.
 - **Error Handling**: Use appropriate HTTP status codes and meaningful error messages.
 - **No Comments**: Do not add unnecessary comments unless specifically requested or for complex logic.
