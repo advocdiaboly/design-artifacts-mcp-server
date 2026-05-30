@@ -8,3 +8,5 @@ To avoid accidental data loss or corruption during file editing:
 # Git Commit Guidelines
 
 - **Atomic Commits**: Each commit should represent a single logical change. Do not group unrelated changes into a single commit. If multiple files are modified for different reasons, commit them separately.
+
+- **Documentation Consistency**: Before committing code changes, ensure that all relevant documentation (e.g., `README.md`, `ARCHITECTURE.md`, `API.md`, and any project-specific docs) is updated to reflect the changes. Verify that the documentation remains consistent with the new implementation.
